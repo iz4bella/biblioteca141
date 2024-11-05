@@ -21,14 +21,14 @@
                 <a href="#" class="social-links">Contato</a>
             </div>
             <div class="icon">
-                <a href="./imgs/ig_icone.png" target="_blank" class="sm-icon">
-                    <ion-icon name="logo instagram"></ion-icon>
+                <a href="" target="_blank" class="sm-icon">
+                    <img src="./imgs/ig_icone.png" alt="" srcset="">
                 </a>
-                <a href="./imgs/twt.png" target="_blank" class="sm-icon">
-                    <ion-icon name="logo twitter"></ion-icon>
+                <a href="" target="_blank" class="sm-icon">
+                    <img src="./imgs/Twitter-Logo.png" alt="" srcset="">
                 </a>
-                <a href="./imgs/github.png" target="_blank" class="sm-icon">
-                    <ion-icon name="logo github"></ion-icon>
+                <a href="" target="_blank" class="sm-icon">
+                    <img src="./imgs/github.png" alt="" srcset="">
                 </a>
             </div>
         </nav>
