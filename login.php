@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,8 @@
                 <input type="password" id="senha" name="Senha"><br>
                 <div class="btn">
                     <button type="submit">Login</button><br>
+                    <a href="home.php" class="Login">Login</a>
+
                     
                 </div>
             </div>
