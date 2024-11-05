@@ -43,6 +43,8 @@
                 <input type="password" id="senha" name="Senha"><br>
                 <div class="btn">
                     <button type="submit">Login</button><br>
+                    <a href="home.php" class="Login">Login</a>
+
                     
                 </div>
             </div>
