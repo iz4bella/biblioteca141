@@ -21,15 +21,15 @@
                 <a href="#" class="social-links">Contato</a>
             </div>
             <div class="icon">
-                <a href="" target="_blank" class="sm-icon">
+              
                     <img src="./imgs/ig_icone.png" alt="" srcset="">
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <img src="./imgs/Twitter-Logo.png" alt="" srcset="">
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <img src="./imgs/github.png" alt="" srcset="">
-                </a>
+               
+              
+                    <img src="./imgs/Twitter-Logo.png" alt="" srcset="" class="tt">
+               
+              
+                    <img src="./imgs/github.png" alt="" srcset="" class="git">
+               
             </div>
         </nav>
     </header>
@@ -43,7 +43,7 @@
                 <input type="password" id="senha" name="Senha"><br>
                 <div class="btn">
                     <button type="submit">Login</button><br>
-                    <a href="home.php" class="Login">Login</a>
+                    <a href="home.php" class="submit">Login</a>
 
                     
                 </div>
@@ -58,7 +58,16 @@
             </div>
         </form>
         
-    </div>           
+    </div>      
+    
+    <footer>
+        <nav>
+            <ul>
+            
+            <ul>
+        <nav>
+    <footer>
+
 </body>
 </html>
 

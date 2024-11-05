@@ -15,4 +15,4 @@ class Banco{
             return $this->conexao;
         }
     }
-}
+} 

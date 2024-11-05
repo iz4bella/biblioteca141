@@ -55,6 +55,8 @@ body {
 .icon:hover {
     opacity: 0.7;
 }
+parent-link{
+}
 
 .social-links {
     padding: 0 2.5rem;
@@ -196,9 +198,10 @@ button:hover {
 }
 
 .icon {
-    width: 30px; 
-    height: 30px;
+    width: 25px; 
+    height: 25px;
     transition: opacity 0.3s;
+    justify-content: space-between; 
 }
 
 .icon:hover {
@@ -229,13 +232,19 @@ button:hover {
 
 .icon img {
     max-width: 100%;
-    height: auto;
-    width: auto;
     display: block;
     margin: 10px;
-    justify-content: space-between;
     gap: 5rem;
    
+}
+
+.git  {
+    height: 20px;
+    width: 20px;
+}
+.tt  {
+    height: 20px;
+    width: 20px;
 }
 
 
