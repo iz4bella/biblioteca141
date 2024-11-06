@@ -41,8 +41,6 @@
                 <input type="text" id="nome" name="Nome"><br>
                 <label for="senha">Senha</label><br>
                 <input type="password" id="senha" name="Senha"><br>
-                <div class="btn">
-                    <button type="submit">Login</button><br>
                     <a href="home.php" class="Login">Login</a>
 
                     
