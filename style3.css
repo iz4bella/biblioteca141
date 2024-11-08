@@ -466,7 +466,7 @@ a:hover {
 }
 
 .main-carousel .carousel-item {
-    flex: 0 0 85%;  /* Tamanho dos slides em 85% da largura */
+    flex: 0 0 85%;  
     position: relative;
     text-align: center;
     margin: 0 15px;  
@@ -475,9 +475,9 @@ a:hover {
 }
 
 .main-carousel img {
-    width: 100%;  /* Largura 100% para preencher o contêiner */
-    height: 450px;  /* Altura maior, do tamanho do banner */
-    object-fit: cover;  /* Faz com que a imagem ocupe toda a área do contêiner sem distorcer */
+    width: 100%;  
+    height: 450px;  
+    object-fit: cover;  
     border-radius: 15px;  
     transition: transform 0.3s ease;
 }
@@ -491,7 +491,7 @@ a:hover {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 40px;  /* Tamanho maior para o título */
+    font-size: 40px;  
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     font-family: 'Roboto', sans-serif;
@@ -502,7 +502,7 @@ a:hover {
     bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;  /* Aumenta o tamanho da descrição */
+    font-size: 24px;  
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     font-family: 'Arial', sans-serif;
@@ -565,7 +565,7 @@ a:hover {
 .book-item img {
     width: 100%;  
     height: 580px;  
-    object-fit: cover;  /* Faz com que a imagem ocupe toda a área sem distorção */
+    object-fit: cover;  
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
@@ -650,6 +650,27 @@ a:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.Comprar{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #008CBA;  
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.Comprar:hover{
+    background-color: #005f73;  
+    transform: translateY(-5px);  
+}
+
+
+
+
 .category-item a:hover, .book-item button:hover {
     background-color: #005f73;  
     transform: translateY(-5px);  
@@ -671,5 +692,90 @@ a:hover {
 
     .main-carousel .prev, .main-carousel .next {
         padding: 12px;  
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-links, .footer-social, .footer-contact {
+    flex: 1;
+}
+
+.footer-links h3, .footer-social h3, .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+}
+
+.footer-links ul li, .footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-social ul li a:hover {
+    color: white;
+}
+
+.footer-social .social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    transition: opacity 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playlists .playlist-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livros-recomendados .livro-item {
+        width: 100%;
+    }
+
+    .playlists .playlist-item, .livros-recomendados .livro-item {
+        width: 90%;
     }
 }

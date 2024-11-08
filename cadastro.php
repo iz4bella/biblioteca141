@@ -37,13 +37,16 @@
     <div class="form">
         <form action="#" class="sub-form">
             <div class="upper-form">
-                <h2>Formulario de Login</h2>
+                <h2>Formulario de Cadastro</h2>
 
              
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" required><br>
+
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="Nome" required><br>
 
-               
+                
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="Senha" required><br>
 
@@ -52,13 +55,7 @@
             </div>
 
          
-            <a href="index.php" class="voltar">Voltar</a>
-
-         
-            <div class="button-form">
-                <p>Você não tem conta? <a href="cadastro.php" class="Cadastrar-se">Cadastrar-se</a></p>
-                
-            </div>
+            <a href="login.php" class="voltar">Voltar</a>
         </form>
     </div>    
     <footer>

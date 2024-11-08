@@ -21,7 +21,6 @@
             </label>
         </div>
     </nav>
-
     <div class="content">
         <!-- Hero Section -->
         <section class="hero">
@@ -71,7 +70,10 @@
                         <h4>It a Coisa</h4>
                         <p>Autor: Stephen King</p>
                         <p>R$ 39,20</p>
-                        <button>Comprar</button>
+                        <a href="livro.php" class="Comprar">Comprar
+                        </a>
+                         
+                         
                     </div>
                     <div class="book-item">
                         <img src="./imgs/pijama.png" alt="O Menino do Pijama Listrado">
@@ -106,6 +108,45 @@
             </div>
         </section>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Experiência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com" target="_blank">
+                        <img src="./imgs/ig_icone.png" alt="Instagram" class="social-icon">
+                    </a></li>
+                    <li><a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/Twitter-Logo.png" alt="Twitter" class="social-icon">
+                    </a></li>
+                    <li><a href="https://github.com" target="_blank">
+                        <img src="./imgs/github.png" alt="GitHub" class="social-icon">
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:contato@dominio.com">Higuinha@gmail.com</a></p>
+                <p>Telefone: (67) 56311-8969</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Biblioteca141. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 
     <script>
         // Função para mover o carrossel de Livros
@@ -122,11 +163,39 @@
             carousel.style.transform = 'translateX(' + (-currentBookSlide * slideWidth) + 'px)';
         }
 
+        // Função para mover o carrossel de Categorias
+        var currentCategorySlide = 0;
+        function moveSlideCategories(direction) {
+            var carousel = document.getElementById('categories-carousel');
+            var totalCategories = carousel.children.length;
+            var slideWidth = carousel.children[0].offsetWidth;
+
+            currentCategorySlide += direction;
+            if (currentCategorySlide < 0) currentCategorySlide = totalCategories - 1;
+            if (currentCategorySlide >= totalCategories) currentCategorySlide = 0;
+
+            carousel.style.transform = 'translateX(' + (-currentCategorySlide * slideWidth) + 'px)';
+        }
+
+        // Função para mover o carrossel do Banner
+        var currentBannerSlide = 0;
+        function moveSlideBanner(direction) {
+            var carousel = document.getElementById('banner-carousel');
+            var totalBanners = carousel.children.length;
+            var slideWidth = carousel.children[0].offsetWidth;
+
+            currentBannerSlide += direction;
+            if (currentBannerSlide < 0) currentBannerSlide = totalBanners - 1;
+            if (currentBannerSlide >= totalBanners) currentBannerSlide = 0;
+
+            carousel.style.transform = 'translateX(' + (-currentBannerSlide * slideWidth) + 'px)';
+        }
+
         // Inicializa os carrosséis
         window.onload = function() {
-            moveMainSlide(0);
-            moveSlideCategories(0);
             moveSlideBooks(0);
+            moveSlideCategories(0);
+            moveSlideBanner(0);
         }
     </script>
 </body>
