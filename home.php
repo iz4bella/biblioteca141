@@ -1,110 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - Biblioteca 141</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <nav class="navigation">
-        
         <h1>Biblioteca-141</h1>
-
-        
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Categorias</a></li>
-            <li><a href="#">Usuário</a></li>
+            <li><a href="usuario.php" class="usuario">Usuário</a></li>
         </ul>
-
-        
         <div class="search-container">
             <input type="text" placeholder="Pesquisar" id="Pesquisar" class="search-input">
-            <label for="Pesquisar" class="search-icon">
+            <label for="Pesquisar" class="search-icon" aria-label="Ícone de pesquisa">
                 <img src="./imgs/lupa.png" alt="Ícone de pesquisa">
             </label>
         </div>
     </nav>
 
-    
     <div class="content">
-    <section class="hero">
+        <!-- Hero Section -->
+        <section class="hero">
             <h2>Encontre o Livro Perfeito para Você!</h2>
             <p>Explore nossa vasta coleção de livros, desde os mais recentes lançamentos até os clássicos atemporais.</p>
         </section>
 
-        <div class="categories">
-    <h3>Categorias</h3>
-    <div class="carousel-container">
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <div class="carousel">
-            <div class="category-item">
-                <img src="" alt="Categoria 1">
-                <h4>Categoria 1</h4>
-                <a href="#">Ver mais</a>
+        <!-- Categorias -->
+        <section class="categories">
+            <h3>Categorias</h3>
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlideCategories(-1)" aria-label="Slide anterior das categorias">&#10094;</button>
+                <div class="carousel" id="categories-carousel">
+                    <div class="category-item">
+                        <img src="./imgs/fiçção.png" alt="Ficção">
+                        <h4>Ficção</h4>
+                        <a href="#">Ver mais</a>
+                    </div>
+                    <div class="category-item">
+                        <img src="./imgs/ajuda2.png.png" alt="Autoajuda">
+                        <h4>Autoajuda</h4>
+                        <a href="#">Ver mais</a>
+                    </div>
+                    <div class="category-item">
+                        <img src="./imgs/fantasia.png" alt="Fantasia">
+                        <h4>Fantasia</h4>
+                        <a href="#">Ver mais</a>
+                    </div>
+                    <div class="category-item">
+                        <img src="./imgs/romance.png" alt="Romance">
+                        <h4>Romance</h4>
+                        <a href="#">Ver mais</a>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlideCategories(1)" aria-label="Próximo slide das categorias">&#10095;</button>
             </div>
-            <div class="category-item">
-                <img src="" alt="Categoria 2">
-                <h4>Categoria 2</h4>
-                <a href="#">Ver mais</a>
-            </div>
-            <div class="category-item">
-                <img src="" alt="Categoria 3">
-                <h4>Categoria 3</h4>
-                <a href="#">Ver mais</a>
-            </div>
-            <div class="category-item">
-                <img src="" alt="Categoria 4">
-                <h4>Categoria 4</h4>
-                <a href="#">Ver mais</a>
-            </div>
-        </div>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-</div>
+        </section>
 
+        <!-- Livros em Destaque -->
+        <section class="book-section">
+            <h3>Livros em Destaque</h3>
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlideBooks(-1)" aria-label="Slide anterior dos livros">&#10094;</button>
+                <div class="carousel" id="books-carousel">
+                    <div class="book-item">
+                        <img src="./imgs/it-a-coisa.png" alt="It a Coisa">
+                        <h4>It a Coisa</h4>
+                        <p>Autor: Stephen King</p>
+                        <p>R$ 39,20</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="book-item">
+                        <img src="./imgs/pijama.png" alt="O Menino do Pijama Listrado">
+                        <h4>O Menino do Pijama Listrado</h4>
+                        <p>Autor: John Boyne</p>
+                        <p>R$ 25,15</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="book-item">
+                        <img src="./imgs/fodase.png" alt="A Sutil Arte de Ligar o Foda-se">
+                        <h4>A Sutil Arte de Ligar o Foda-se</h4>
+                        <p>Autor: Mark Manson</p>
+                        <p>R$ 28,15</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="book-item">
+                        <img src="./imgs/anne.png" alt="O Diário de Anne Frank">
+                        <h4>O Diário de Anne Frank</h4>
+                        <p>Autora: Anne Frank</p>
+                        <p>R$ 30,00</p>
+                        <button>Comprar</button>
+                    </div>
+                    <div class="book-item">
+                        <img src="./imgs/diario-banana.png" alt="O Diário de um Banana">
+                        <h4>O Diário de um Banana</h4>
+                        <p>Autor: Jeff Kinney</p>
+                        <p>R$ 28,12</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlideBooks(1)" aria-label="Próximo slide dos livros">&#10095;</button>
+            </div>
+        </section>
+    </div>
 
-<div class="book-section">
-    <h3>Livros em Destaque</h3>
-    <div class="carousel-container">
-        <button class="prev" onclick="moveSlideBooks(-1)">&#10094;</button>
-        <div class="carousel">
-            <div class="book-item">
-                <img src="./imgs/it-a-coisa.png" alt="Livro 1">
-                <h4>It a coisa </h4>
-                <p>Autor: Stephean King </p>
-                <p> 39,20R$</p>
-                <button>Comprar</button>
-            </div>
-            <div class="book-item">
-                <img src="./imgs/pijama.png" alt="Livro 2">
-                <h4>O menino do pijama listrado</h4>
-                <p>Autor: John Boyne</p>
-                <p> 25,15R$</p>
-                <button>Comprar</button>
-            </div>
-            <div class="book-item">
-                <img src="./imgs/fodase.png" alt="Livro 3">
-                <h4>A sutil arte de ligar o foda-se</h4>
-                <p>Autor: Mark Manson</p>
-                <p>28,15R$</p>
-                <button>Comprar</button>
-            </div>
-            <div class="book-item">
-                <img src="./imgs/anne.png" alt="Livro 4">
-                <h4>O diario de anne frank</h4>
-                <p>Autora: Anne Frank</p>
-                <p>30R$</p>
-                <button>Comprar</button>
-            </div>
-        </div>
-        <button class="next" onclick="moveSlideBooks(1)">&#10095;</button>
-    </div>
-</div>
-        
-    </div>
+    <script>
+        // Função para mover o carrossel de Livros
+        var currentBookSlide = 0;
+        function moveSlideBooks(direction) {
+            var carousel = document.getElementById('books-carousel');
+            var totalBooks = carousel.children.length;
+            var slideWidth = carousel.children[0].offsetWidth;
+
+            currentBookSlide += direction;
+            if (currentBookSlide < 0) currentBookSlide = totalBooks - 1;
+            if (currentBookSlide >= totalBooks) currentBookSlide = 0;
+
+            carousel.style.transform = 'translateX(' + (-currentBookSlide * slideWidth) + 'px)';
+        }
+
+        // Inicializa os carrosséis
+        window.onload = function() {
+            moveMainSlide(0);
+            moveSlideCategories(0);
+            moveSlideBooks(0);
+        }
+    </script>
 </body>
 </html>

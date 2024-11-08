@@ -1,11 +1,11 @@
-/* HEADER FILHA DA PUTA  */
+/* css da home do site OBS: ALGUEM MEXE NA IMGAEM DO BANNER PQ EU SOU IDIOTA E N CONSIGO ASS: HIGUINHA123 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/*meninas essa aq é a header padrao para todos as outras paginas ok*/
 .navigation {
     position: fixed;
     top: 0;
@@ -140,7 +140,7 @@ a:hover {
     padding: 20px;
     background-color: #f4f4f4;
 }
-
+/*Fim da header padrao */
 
 .content {
     margin-top: 100px;
@@ -448,5 +448,228 @@ a:hover {
 @media (max-width: 768px) {
     .category-item, .book-item {
         width: 180px; 
+    }
+}
+
+/* Carrossel banner */
+.main-carousel {
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border-radius: 15px;  
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);  
+}
+
+.main-carousel .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;  
+}
+
+.main-carousel .carousel-item {
+    flex: 0 0 85%;  /* Tamanho dos slides em 85% da largura */
+    position: relative;
+    text-align: center;
+    margin: 0 15px;  
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.main-carousel img {
+    width: 100%;  /* Largura 100% para preencher o contêiner */
+    height: 450px;  /* Altura maior, do tamanho do banner */
+    object-fit: cover;  /* Faz com que a imagem ocupe toda a área do contêiner sem distorcer */
+    border-radius: 15px;  
+    transition: transform 0.3s ease;
+}
+
+.main-carousel img:hover {
+    transform: scale(1.05);  /* Efeito de zoom suave ao passar o mouse */
+}
+
+.main-carousel h4 {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;  /* Tamanho maior para o título */
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-carousel p {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;  /* Aumenta o tamanho da descrição */
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-family: 'Arial', sans-serif;
+}
+
+.main-carousel .prev, .main-carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.main-carousel .prev:hover, .main-carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.main-carousel .prev {
+    left: 10px;
+}
+
+.main-carousel .next {
+    right: 10px;
+}
+
+/* Carrosséis de Categorias e Livros */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+    border-radius: 15px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 70%; 
+    margin: 0 15px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px);  /* Efeito de leve elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img,
+.book-item img {
+    width: 100%;  
+    height: 580px;  
+    object-fit: cover;  /* Faz com que a imagem ocupe toda a área sem distorção */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover,
+.book-item img:hover {
+    transform: scale(1.1);  /* Efeito de zoom maior */
+}
+
+.carousel .prev, .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+/* Estilização das categorias e livros */
+.category-item, .book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+.category-item:hover, .book-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-item img, .book-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.category-item h4, .book-item h4 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Estilização para botões */
+.category-item a, .book-item button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #008CBA;  
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.category-item a:hover, .book-item button:hover {
+    background-color: #005f73;  
+    transform: translateY(-5px);  
+}
+
+/* Ajustes para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .main-carousel .carousel-item {
+        flex: 0 0 95%;  
+    }
+
+    .carousel-item {
+        flex: 0 0 85%;  
+    }
+
+    .carousel .prev, .carousel .next {
+        padding: 12px;  
+    }
+
+    .main-carousel .prev, .main-carousel .next {
+        padding: 12px;  
     }
 }
