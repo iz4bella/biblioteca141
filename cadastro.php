@@ -39,14 +39,16 @@
             <div class="upper-form">
                 <h2>Formulario de Cadastro</h2>
 
-             
-                <label for="email">Email</label>
-                <input type="text" id="email" name="Email" required><br>
 
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="Nome" required><br>
 
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" required><br>
                 
+                <label for="cpf">CPF</label>
+                <input type="password" id="cpf" name="Cpf" required><br>
+
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="Senha" required><br>
 
