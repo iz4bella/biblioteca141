@@ -1,4 +1,4 @@
-
+/*Css usuario */
 * {
     margin: 0;
     padding: 0;
@@ -427,7 +427,7 @@ a:hover {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.6);
 }
 
-/* Botão Geral (Refinando o estilo de botões com foco na suavidade das transições) */
+/* Botão Geral */
 button {
     border: none;
     padding: 12px 18px;
@@ -449,7 +449,7 @@ button:focus {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.6);
 }
 
-/* Rodapé */
+
 footer {
     background-color: #333;
     color: #fff;

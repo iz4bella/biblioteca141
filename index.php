@@ -42,7 +42,7 @@
         </footer>
     </div>
 
-    <!-- Script para interações -->
+    <!--interações -->
     <script>
         document.querySelector('.search-btn').addEventListener('click', function() {
             let query = document.querySelector('.search-input').value;

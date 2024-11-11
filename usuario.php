@@ -92,7 +92,7 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
+   
     <footer>
         <div class="footer-container">
             <div class="footer-links">
@@ -147,32 +147,32 @@
             }
         }
 
-        // Função para editar o perfil
+        
         function editarPerfil() {
             alert("Você está editando o perfil!");
          
         }
 
-        // Função para editar playlist
+      
         function editarPlaylist(playlistId) {
             alert("Editando Playlist " + playlistId);
           
         }
 
-        // Função para remover playlist
+      
         function removerPlaylist(playlistId) {
             if (confirm("Tem certeza que deseja excluir esta playlist?")) {
                 document.getElementById("playlist" + playlistId).remove();
             }
         }
 
-        // Função para criar nova playlist
+       
         function criarPlaylist() {
             alert("Abrindo formulário para criar uma nova playlist!");
           
         }
 
-        // Função para adicionar livros aos favoritos
+   
         function adicionarFavoritos(livroId) {
             let livro = document.getElementById("livro" + livroId);
             livro.classList.toggle("favorito");

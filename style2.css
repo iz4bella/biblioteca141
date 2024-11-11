@@ -1,11 +1,11 @@
-/* Reset Básico para Normalizar o Estilo */
+/* Css primeira pag */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da Página */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
@@ -13,14 +13,14 @@ body {
     line-height: 1.6;
 }
 
-/* Container Principal */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
 }
 
-/* Cabeçalho */
+
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -41,7 +41,7 @@ header p {
     margin-top: 10px;
 }
 
-/* Navegação */
+
 .navbar {
     background-color: navy;
     padding: 15px 0;
@@ -115,7 +115,7 @@ header p {
     transform: translateY(-3px);
 }
 
-/* Rodapé */
+
 footer {
     background-color: #333;
     color: white;

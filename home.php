@@ -22,7 +22,7 @@
         </div>
     </nav>
     <div class="content">
-        <!-- Hero Section -->
+      
         <section class="hero">
             <h2>Encontre o Livro Perfeito para Você!</h2>
             <p>Explore nossa vasta coleção de livros, desde os mais recentes lançamentos até os clássicos atemporais.</p>

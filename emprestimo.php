@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Emprestimo</title>
     <link rel="stylesheet" href="./views/style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
     <div class="form">
         <form action="#" class="sub-form">
             <div class="upper-form">
-                <h2> Cadastro</h2>
+                <h2> Emprestimo</h2>
 
 
                 <label for="nome">Nome</label>
@@ -57,7 +57,7 @@
             </div>
 
          
-            <a href="login.php" class="voltar">Voltar</a>
+            <a href="livro.php" class="voltar">Voltar</a>
         </form>
     </div>    
     <footer>

@@ -50,7 +50,7 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 
 function updateCarousel() {
-    const offset = -currentIndex * 100; // Cada imagem tem 100% da largura
+    const offset = -currentIndex * 100; 
     document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
 }
 

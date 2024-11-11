@@ -557,7 +557,7 @@ a:hover {
 }
 
 .carousel-item:hover {
-    transform: translateY(-10px);  /* Efeito de leve elevação ao passar o mouse */
+    transform: translateY(-10px);  
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -572,7 +572,7 @@ a:hover {
 
 .carousel-item img:hover,
 .book-item img:hover {
-    transform: scale(1.1);  /* Efeito de zoom maior */
+    transform: scale(1.1);  
 }
 
 .carousel .prev, .carousel .next {
@@ -676,7 +676,7 @@ a:hover {
     transform: translateY(-5px);  
 }
 
-/* Ajustes para dispositivos menores */
+
 @media screen and (max-width: 768px) {
     .main-carousel .carousel-item {
         flex: 0 0 95%;  
