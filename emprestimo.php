@@ -53,7 +53,7 @@
                 <input type="password" id="senha" name="Senha" required><br>
 
                
-                <a href="home.php" class="custom-link">Login</a>
+                <a href="certificado.php" class="custom-link">Confirmar </a>
             </div>
 
          

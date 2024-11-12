@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Livro</title>
-    <link rel="stylesheet" href="style5.css">
+    <title>ADM</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
 <body>
-<nav class="navigation">
+    <nav class="navigation">
         <h1>Biblioteca-141</h1>
         <ul>
-            <li><a href="#home.php">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Categorias</a></li>
             <li><a href="usuario.php" class="usuario">Usuário</a></li>
         </ul>
@@ -21,46 +21,15 @@
             </label>
         </div>
     </nav>
+    <div class="content">
+      
+        <section class="hero">
 
-<div class="container">
-    <div class="book-info">
-        <img src="./imgs/it-a-coisa.png" alt="Capa do Livro" class="book-cover">
-        <div class="book-details">
-            <h2 class="book-title">IT A COISA</h2>
-            <p class="book-author"><strong>Autor:</strong> Stephen King </p>
-            <p class="book-genre"><strong>Gênero:</strong> Ficção Científica</p>
-            <p class="book-description">
-            Durante as férias de 1958, em uma pacata cidadezinha chamada Derry, um grupo de sete amigos começa a ver coisas estranhas. Um conta que viu um palhaço, outro que viu uma múmia. Finalmente, acabam descobrindo que estavam todos vendo a mesma coisa: um ser sobrenatural e maligno que pode assumir várias formas.
-            </p>
-        </div>
+
+
+
     </div>
-
-    <div class="actions">
-        <a href="compra" class="action-btn">Comprar</a>
-        <a href="emprestimo.php" class="action-btn loan-btn">Pedir Emprestado</a>
-    </div>
-
-    <section class="reviews">
-        <h3>Comentários </h3>
-        <div class="review">
-            <p><strong>Caique Flores:</strong> ★★★★★</p>
-            <p>Palhaço filho da puta comeu o George </p>
-        </div>
-        <div class="review">
-            <p><strong>Gabriella Santos:</strong> ★★★★★</p>
-            <p>Adorei o enredo, mas achei o final um pouco previsível. No geral achei o livro muito bom!!.</p>
-        </div>
-        <a href="avaliacoes.html" class="action-btn">Ver todos os comentários </a>
-    </section>
-
-    <section class="author-info">
-        <h3>Sobre o Autor</h3>
-        <p>O autor, Stephen King , é um renomado escritor de ficção científica, conhecido por suas obras inovadoras e pela habilidade de criar mundos complexos e cativantes. Ele tem mais de 10 livros publicados e é considerado uma referência no gênero.</p>   
-    </section>
-
-</div>
-
-<footer>
+    <footer>
     <div class="footer-container">
         <div class="footer-links">
             <h3>Links Rápidos</h3>

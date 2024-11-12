@@ -1,61 +1,79 @@
-
 <?php
 class Livro{
-    public $titulo;
-    public $autor;
-    public $genero;
-    public $status = "Disponível";
-    public $usuario;
+    protected $titulo;
+    protected $autor;
+    protected $categoria;
+    protected $isbn;
+    protected $status_livro = "Disponível";
+    protected $usuario;
  
-    public function __construct($livro){
+    public function __construct($titulo, $autor, $categoria, $isbn) {
         $this->titulo = $titulo;
         $this->autor = $autor;
-        $this->genero = $genero;
+        $this->categoria = $categoria;
+        $this->isbn = $isbn;
     }
  
     public function emprestar($usuario){
-        if($this->status != "Disponivel"){
+        if($this->status_livro != "Disponivel"){
             echo 'Livro já está emprestado';
             return;
         }
-        $this->status = "Indisponivel";
+        $this->status_livro = "Indisponivel";
         $this->usuario = $usuario;
     }
  
     public function devolver(){
-        if($this->status == "Disponível"){
+        if($this->status_livro == "Disponível"){
             echo 'Ja está aqui.';
             return;
         }
-        $this->status = "Disponivel";
+        $this->status_livro = "Disponivel";
         $this->usuario = null;
     }
  
-    public function criar(){
-        return $query = 'insert into livro(titulo, autor, genero, status_livro) values
-        ("'.$this->titulo.'", "'.$this->autor'", "'.$this->genero'", "'.$this->status.'");';
-    }
-    public function ler(){
-        echo "select * from livro where titulo = " .$this->titulo. ";";
-    }
-    public function atualizar($genero_novo){
- 
-        $query = "update livro set";
- 
-        foreach ($arrayColunas as $coluna){
-        
-            $chave;
- 
-            /
-            $valor;
- 
-            $query += .$chave. '="'.$valor.'"';
+    public function criar($conexao){
+        $checkQuery = 'SELECT * FROM livro WHERE isbn = "' . $this->isbn . '";';
+        $result = mysqli_query($conexao, $checkQuery);
+        if (mysqli_num_rows($result) > 0) {
+            echo "Erro: ISBN já cadastrado!";
+            return;
         }
-        return $query += 'where titulo = "'.$this->titulo.'";';
- 
+        $query = 'INSERT INTO livro (titulo, autor, isbn, categoria, status_livro) VALUES ("' . $this->titulo . '", "' . $this->autor . '", "' . $this->isbn . '", "' . $this->categoria . '", "' . $this->status_livro . '");';
+        mysqli_query($conexao, $query);
     }
-    public function deletar(){
-        echo "delete * from livro where titulo = ".$this->titulo. ";";
+ 
+    public function ler($conexao){
+        echo "SELECT * FROM livro WHERE titulo = " .$this->titulo. ";";
+    }
+   
+    public function atualizar($conexao, $valores) {
+        $checkQuery = 'SELECT * FROM livro WHERE isbn = "' . $this->isbn . '";';
+        $result = mysqli_query($conexao, $checkQuery);
+        if (mysqli_num_rows($result) === 0) {
+            echo "Erro: Livro não encontrado!";
+            return;
+        }
+ 
+        $query = 'UPDATE livro SET ';
+        foreach ($valores as $coluna => $valor) {
+            if ($coluna !== 'isbn') {
+                $query .= $coluna . ' = "' . $valor . '", ';
+            }
+        }
+        $query = rtrim($query, ', ') . ' WHERE isbn = "' . $this->isbn . '";';
+        mysqli_query($conexao, $query);
+    }
+    public function deletar($conexao){
+        $checkQuery = 'SELECT * FROM livro WHERE isbn = "' . $this->isbn . '" AND status = "Indisponível";';
+        $result = mysqli_query($conexao, $checkQuery);
+        if (mysqli_num_rows($result) > 0) {
+            echo "Erro: Não é possível excluir um livro que está emprestado!";
+            return;
+        }
+ 
+        $query = 'DELETE FROM livro WHERE isbn = "' . $this->isbn . '";';
+        mysqli_query($conexao, $query);
     }
 }
    
