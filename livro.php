@@ -44,7 +44,7 @@
         <h3>Comentários </h3>
         <div class="review">
             <p><strong>Caique Flores:</strong> ★★★★★</p>
-            <p>Palhaço filho da puta comeu o George </p>
+            <p>Uma ótima história!</p>
         </div>
         <div class="review">
             <p><strong>Gabriella Santos:</strong> ★★★★★</p>
