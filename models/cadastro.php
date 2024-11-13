@@ -63,7 +63,7 @@ class Usuario{
         }
     }
     public function criar($nome, $email){
-        return "insert into usuario(nome, cep) values (".this->nome.", ".this->email.");";
+        return "insert into usuario(nome, email) values (".this->nome.", ".this->email.");";
     }
     public function ler(){
         return "select * from usuario where nome = ".this->nome.";";

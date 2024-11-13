@@ -1,15 +1,13 @@
 <?php
 class Livro{
     protected $titulo;
-    protected $autor;
     protected $categoria;
     protected $isbn;
     protected $status_livro = "Disponível";
     protected $usuario;
  
-    public function __construct($titulo, $autor, $categoria, $isbn) {
+    public function __construct($titulo, $categoria, $isbn) {
         $this->titulo = $titulo;
-        $this->autor = $autor;
         $this->categoria = $categoria;
         $this->isbn = $isbn;
     }
@@ -39,7 +37,7 @@ class Livro{
             echo "Erro: ISBN já cadastrado!";
             return;
         }
-        $query = 'INSERT INTO livro (titulo, autor, isbn, categoria, status_livro) VALUES ("' . $this->titulo . '", "' . $this->autor . '", "' . $this->isbn . '", "' . $this->categoria . '", "' . $this->status_livro . '");';
+        $query = 'INSERT INTO livro (titulo, isbn, categoria, status_livro) VALUES ("' . $this->titulo . '", "' . $this->isbn . '", "' . $this->categoria . '", "' . $this->status_livro . '");';
         mysqli_query($conexao, $query);
     }
  
